@@ -4,4 +4,4 @@
 # If you wish to use said dot files,
 # the requirements are as follows...
 #
-# Fontawesome fonts, and Google-Noto-Fonts.
+# Fontawesome fonts and Google-Noto-Fonts.
