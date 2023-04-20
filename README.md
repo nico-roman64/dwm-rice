@@ -1,5 +1,5 @@
 # dwm-rice
-# Just my config dot file to keep as a backup for my dwm rice that I am working on.
+# Just my dot file configuration to backup online for my gentoo dwm rice that I am working on.
 
 
 
