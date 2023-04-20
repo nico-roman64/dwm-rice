@@ -1,0 +1,17 @@
+#!/bin/bash
+
+dwmwifi () {
+icona="📶"
+icond="💀"
+wifi="W:"
+
+if [ -d /sys/class/net/wlp2s0 ]; then
+        if [ "$(cat /sys/class/net/wlp2s0/carrier)" == "1" ]; then
+                printf " %s %s\\n" "$wifi" "$icona |"
+        else
+                printf " %s %s\\n" "$wifi" "$icond |"
+        fi
+fi
+}
+
+dwmwifi

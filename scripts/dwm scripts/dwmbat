@@ -1,0 +1,16 @@
+#!/bin/bash
+
+dwmbat () {
+CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
+STATUS=$(cat /sys/class/power_supply/BAT0/status)
+iconc="🔌"
+icond="🔋"
+
+if [ "$STATUS" = "Charging" ]; then
+	printf " %s  %s %s \\n" "$iconc" "$CHARGE%" " |"
+else
+	printf " %s  %s %s \\n" "$icond" "$CHARGE%" " |"
+fi
+}
+
+dwmbat

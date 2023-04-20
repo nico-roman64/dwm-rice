@@ -1,0 +1,17 @@
+#!/bin/bash
+
+dwmenet () {
+icona="🖧"
+icond="💀"
+eth="E:"
+
+if [ -d /sys/class/net/eno0 ]; then
+	if [ "$(cat /sys/class/net/eno0/carrier)" == "1" ]; then
+		printf " %s %s\\n" "$eth" "$icona |"
+	else
+		printf " %s %s\\n" "$eth" "$icond |"
+	fi
+fi
+}
+
+dwmenet

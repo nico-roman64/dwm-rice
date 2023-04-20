@@ -1,0 +1,39 @@
+#!/bin/bash
+
+LOC=$(readlink -f "$0")
+DIR=$(dirname "$LOC")
+
+. "$DIR/dwmbat"
+. "$DIR/dwmenet"
+. "$DIR/dwmtemp"
+. "$DIR/dwmclock"
+. "$DIR/dwmwifi"
+. "$DIR/dwmdisk"
+. "$DIR/dwmvol"
+
+parallelize() {
+	while true
+	do
+	    printf "Running parallel processes\n"
+	    #dwm_networkmanager &
+	    #dwm_weather &
+	    sleep 5
+done
+}
+parallelize &
+
+while true; do
+
+	bar=""
+	bar="$bar$(dwmtemp)"
+	bar="$bar$(dwmdisk)"
+	bar="$bar$(dwmenet)"
+	bar="$bar$(dwmwifi)"
+	bar="$bar$(dwmvol)"
+	bar="$bar$(dwmbat)"
+	bar="$bar$(dwmclock)"
+	xsetroot -name "$bar"
+
+	sleep 1s
+
+done
