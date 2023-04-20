@@ -14,9 +14,7 @@ DIR=$(dirname "$LOC")
 parallelize() {
 	while true
 	do
-	    printf "Running parallel processes\n"
-	    #dwm_networkmanager &
-	    #dwm_weather &
+	    printf "Processing parallels \n"
 	    sleep 5
 done
 }
